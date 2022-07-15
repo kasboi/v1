@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { device } from "./components/styles/Media";
+import { motion } from "framer-motion";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   padding: 0 4rem;
   z-index: -100;
   color: ${({theme}) => theme.font.secondaryText};
@@ -14,26 +15,8 @@ const Container = styled.div`
     position: relative;
     font-weight: 500;
     margin-bottom: 2rem;
-
-    @media ${device.tablet} {
-      margin-bottom: 6rem;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 45%;
-      margin-left: 1rem;
-      display: inline-block;
-      height: 1px;
-      width: 20rem;
-      background-color: #dee2e6;
-      opacity: .6;
-
-      @media ${device.tablet} {
-        width: 8rem;
-      }
-    }
+    text-transform: uppercase;
+    color: ${({theme }) => theme.logo.color};
   }
 `
 const Box = styled.div`
@@ -83,11 +66,19 @@ const Decor = styled.span`
 
 const Projects = () => {
   return (
-    <Container>
-        <h2 className="project__heading">Some Things I've Built</h2>
+    <Container
+      initial={{y: 40, opacity: 0}}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {delay: .2,ease: 'easeIn'}
+      }}
+      viewport={{once: true}}
+    >
+        <h3 className="project__heading">Projects</h3>
         <Box>
           <div className="box__title">
-            <h3><a href="https://guitarclub.netlify.app/" target="_blank">Guitar Club</a></h3>
+            <h3><a href="https://guitarclub.netlify.app/" rel="noreferrer" target="_blank">Guitar Club</a></h3>
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
           <p>A small responsive website i made early on while fiddling with the intricacies of SCSS.</p>
@@ -99,7 +90,7 @@ const Projects = () => {
         </Box>
         <Box>
           <div className="box__title">
-            <h3><a href="https://codepen.io/kolawole-abdullah-solahudeen/pen/BaJzjoN" target="_blank">Tic-Tac game</a></h3>
+            <h3><a href="https://codepen.io/kolawole-abdullah-solahudeen/pen/BaJzjoN" rel="noreferrer" target="_blank">Tic-Tac game</a></h3>
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
           <p>A simple 3x3 tic-tac toe game.</p>
@@ -111,7 +102,7 @@ const Projects = () => {
         </Box>
         <Box>
           <div className="box__title">
-            <h3><a href="https://codepen.io/kolawole-abdullah-solahudeen/pen/dyJXGGa" target="_blank">Calculator</a></h3>
+            <h3><a href="https://codepen.io/kolawole-abdullah-solahudeen/pen/dyJXGGa" rel="noreferrer" target="_blank">Calculator</a></h3>
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
           <p>A simple calculator.</p>
@@ -123,7 +114,7 @@ const Projects = () => {
         </Box>
         <Box>
           <div className="box__title">
-            <h3><a href="https://kas-todo.netlify.app/" target="_blank">Task Master</a></h3>
+            <h3><a href="https://kas-todo.netlify.app/" rel="noreferrer" target="_blank">Task Master</a></h3>
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
           <p>A todo list project made with Materialize and firebase services (authentication and database).</p>

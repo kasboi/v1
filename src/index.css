@@ -1,0 +1,8 @@
+.ionicon {
+  width: 32px;
+  overflow: visible;
+  /* stroke: #000; */
+  stroke-width: 32;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}

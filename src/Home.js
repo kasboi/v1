@@ -1,24 +1,44 @@
-import { useContext } from "react";
 
 import styled from "styled-components";
-import { propContext } from "./App";
 import { device } from "./components/styles/Media";
+import { motion } from "framer-motion";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
+  display: flex;
+  margin: auto 3rem;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+
+  @media ${device.tablet}{
+    margin: auto 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  @media ${device.mobileL}{
+    margin: auto 1rem;
+  }
+`
+
+const TxtContainer = styled(motion.div)`
   display: block;
-  margin: 3rem 2rem 0 2rem;
-  max-width: 40rem;
-  text-align: justify;
+  max-width: 55%;
   color: ${({theme}) => theme.font.primaryText};
 
-  @media ${device.tablet} {
-    margin: 10rem 1rem 0 1rem;
+  @media ${device.tablet}{
+    max-width: 100%;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  @media ${device.mobileL}{
+    text-align: left;
   }
 
   h1 {
     color: ${({theme}) => theme.logo.color};
     font-size: 3rem;
-    letter-spacing: .08em;
+    letter-spacing: .06em;
     margin-bottom: .5rem;
   }
   h4 {
@@ -29,63 +49,49 @@ const Container = styled.div`
     line-height: 1.8rem;
   }
 `
+const ImgContainer = styled(motion.div)`
+  position: relative;
+  border: 2px solid ${({theme}) => theme.logo.color};
+  height: 15rem;
+  width: 14rem;
+  border-radius: 5px;
 
-const CTA = styled.div`
-  display: none;
-  font-weight: 500;
-
-  @media ${device.tablet} {
-    display: block;
+  @media ${device.tablet}{
+    margin: 0 auto;
   }
 
-  .cta__btn {
-    font-size: 1.2rem;
-    display: inline-block;
-    border: none;
-    color: ${({theme}) => theme.modal.primaryColor};
-    margin: 3rem auto;
-    padding: .8rem 1rem;
-    background-color: ${({theme}) => theme.logo.color_2 || theme.logo.color};
-    position: relative;
-    overflow: hidden;
-
-    &::after {
-      content: "";
-      width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 100%;
-      background-color: ${({theme}) => theme.color.backgroundColor};
-      transition: all .2s;
-
-      position: absolute;
-      top: -6px;
-      left: -8px;
-    }
+  .display__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
   }
 `
 const Home = () => {
 
-  const {open, setOpen, setModal} = useContext(propContext)
-
-  return ( 
-    <Container>
-      <h1>Hello,<br /> I'm KAS</h1>
-      <h4>Kolawole Abdullah Solahudeen</h4>
-      <p>I provide front-end solutions using simple and reusable components to build fluid designs and experience. I enjoy writing clean and intuitive codes and when I'm not in front of the computer screen, I'm probably enjoying manga, anime, music or researching the new big thing in tech.<br /> I am available for contracts and full-time remote jobs.</p>
-
-      <CTA>
-      <button className="cta__btn"
-        onClick={() => {
-          if (open == '') {
-            setOpen('open')
-            setModal('open')}
-          else {
-            setOpen('')
-            setModal('')}
-        }}
+  return (
+    <Container
+    animate={{transition: {staggerChildren: 5}}}
+    > 
+      <TxtContainer
+      initial={{x: '-100vh', opacity: 0}}
+      animate={{x: 0, opacity: 1, transition: {delay: 0.8, duration: 0.65, ease: 'easeInOut', type: 'spring', stiffness: 120}}}
       >
-      Wanna know more?</button>
-      </CTA>
+        <h1>Hello,{device.tablet ? <br /> : ''} I'm KAS</h1>
+        <h4>Kolawole Abdullah Solahudeen</h4>
+        <p>I provide front-end solutions using simple and reusable components to build fluid designs and experience. I enjoy writing clean and intuitive codes and when I'm not in front of the computer screen, I'm probably enjoying manga, anime, music or researching the new big thing in tech.<br /> I am available for contracts and full-time remote jobs.</p>
+      </TxtContainer>
+      <ImgContainer
+      initial={{opacity: 0}}
+      animate={{opacity: 1, 
+        transition: {delay: 1, duration: 1, ease: 'easeIn'}}}
+      >
+        <motion.img src="img/kasSelfie.jpeg" alt="my selfied" className="display__img" 
+          initial={{x: -18, y: -18}}
+          whileHover={{x: 0, y: 0, transition: {ease: 'easeInOut'}}}
+          whileTap={{x: 0, y: 0, transition: {ease: 'easeInOut'}}}
+        />
+      </ImgContainer>
     </Container>
    );
 }

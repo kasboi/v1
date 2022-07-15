@@ -1,17 +1,19 @@
-import { useState, useContext } from 'react';
-import Modal from './Modal';
+import { useContext } from 'react';
 import { Link } from "react-router-dom";
 import NavStyle from './components/styles/Navbar.style';
 import { propContext } from './App';
+import NightIcon from './icons/night'
+import LightIcon from './icons/light';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const {Container, Nav, SwitchContainer, Switch, Logo, Menu, Stick} = NavStyle
-
+const { Container, Nav, Logo, } = NavStyle
 
 const Navbar = ({ theme, invertTheme, setHere}) => {
-  const {open, setOpen, modal, setModal, switched, setSwitched} = useContext(propContext)
+  const { switched, setSwitched } = useContext(propContext)
   
   const Flick = () => {
-    if (switched == '') {
+    if (switched === '') {
       setSwitched('switched')
       setHere(invertTheme)
     } else {
@@ -20,40 +22,34 @@ const Navbar = ({ theme, invertTheme, setHere}) => {
     }
   }
 
+  const Resume = styled(motion.a)`  
+    border: 1px solid ${({theme}) => theme.font.secondaryText};
+    color: ${({theme}) => theme.color.backgroundColor} !important;
+    background-color: ${({theme}) => theme.logo.color};
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 4px 10px;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    margin-right: 3rem;
+  `
+
 
   return (
-    <div> 
-      <Nav>
-        <Link to="/" style={{
-          marginRight: "auto"
-        }}><Logo alt='logo'/>
-        </Link>
-        <Container>
-          <SwitchContainer onClick={() => Flick()}>
-            <ion-icon name="sunny-outline" className="switch"></ion-icon>
-            <Switch>
-              <span className={switched} ></span>
-            </Switch>
-            <ion-icon name="moon-outline" className="switch"></ion-icon>
-          </SwitchContainer>
-          <Stick />
-        </Container>
-        <Menu className={open} 
-        onClick={() => {
-          if (open == '') {
-            setOpen('open')
-            setModal('open')}
-          else {
-            setOpen('')
-            setModal('')}
-          }}>
-            <span></span>
-            <span></span>
-            <span></span>
-        </Menu>
-      </Nav>
-      <Modal modal={modal} setModal={ setModal } setOpen={ setOpen } />
-    </div>
+    <Nav>
+      <Link to="/" style={{
+        marginRight: "auto"
+      }}><Logo alt='logo'/>
+      </Link>
+      <Resume href='doc/my_resume.pdf'
+      whileTap={{scale: 0.9, transition: {ease: 'easeInOut'}}}
+      >
+        RESUME
+      </Resume>
+      <Container onClick={() => Flick()}>
+      {switched === 'switched' ? <NightIcon/> : <LightIcon/>}
+      </Container>
+    </Nav>
   );
 }
  
