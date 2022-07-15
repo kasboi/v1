@@ -44,11 +44,11 @@ const Sidebar = () => {
     <> 
     <Leftdiv>
       <ul className="logo-box">
-        <li className="logo-box__container"><a href="https://github.com/kasboi" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-        <li className="logo-box__container"><a href="https://www.instagram.com/kasthegeneral/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li className="logo-box__container"><a href="https://github.com/kasboi" rel="noreferrer" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li className="logo-box__container"><a href="https://www.instagram.com/kasthegeneral/" rel="noreferrer" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
         <li className="logo-box__container"><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        <li className="logo-box__container"><a href="https://www.linkedin.com/in/solahudeen-abdullah-987824126/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-        <li className="logo-box__container"><a href="https://codepen.io/kolawole-abdullah-solahudeen" target="_blank"><ion-icon name="logo-codepen"></ion-icon></a></li>
+        <li className="logo-box__container"><a href="https://www.linkedin.com/in/solahudeen-abdullah-987824126/" rel="noreferrer" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li className="logo-box__container"><a href="https://codepen.io/kolawole-abdullah-solahudeen" rel="noreferrer" target="_blank"><ion-icon name="logo-codepen"></ion-icon></a></li>
       </ul>
     </Leftdiv>
 

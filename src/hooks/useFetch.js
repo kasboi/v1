@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Theme } from "../components/styles/Theme";
 
-{/* 
+/* 
   Custom hook to store and retrieve the theme last used when
   user visited the website
-*/}
+*/
 
 const { theme } = Theme;
 

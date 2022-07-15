@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { device } from "./components/styles/Media";
+import { motion } from "framer-motion";
 
-const Container = styled.div`
-  padding: 5rem 7rem;
+const Container = styled(motion.div)`
+  padding: 2rem 5rem;
   color: ${({theme}) => theme.font.primaryText};
-  font-size: .8rem;
+  font-size: 1rem;
   max-width: 75rem;
 
   @media ${device.laptop} {
@@ -12,7 +13,7 @@ const Container = styled.div`
   }
   @media ${device.tablet} {
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 1.5rem;
   }
   @media ${device.mobileL} {
     padding: 2rem 1rem;
@@ -42,12 +43,8 @@ const Container = styled.div`
   }
 
   .background__paragraph {
-    font-size: .8rem;
     text-align: justify;
     
-    @media ${device.tablet} {
-      font-size: .85rem;
-    }
   }
 
   .background__paragraph :not(p:last-child) {
@@ -80,12 +77,14 @@ const Container = styled.div`
       
       @media ${device.tablet} {
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+      }
+      @media ${device.mobileL} {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
 
     &__header {
-      font-size: .85rem;
+      font-size: 1rem;
       text-transform: uppercase;
       font-weight: 600;
       margin-bottom: .5rem;
@@ -130,7 +129,15 @@ const Container = styled.div`
 
 const Home = () => {
   return ( 
-    <Container>
+    <Container
+    initial={{y: 40, opacity: 0}}
+    whileInView={{
+      y: 0,
+      opacity: 1,
+      transition: {delay: 0.3, duration: 0.4, ease: 'easeIn'}
+    }}
+    viewport={{once: true}}
+    >
     <div className="background">
       <div className="background__heading heading">Background</div>
       <div className="background__paragraph">
@@ -144,22 +151,23 @@ const Home = () => {
         <ul className="skills__languages">
           <li className="skills__header">Languages</li>
           <li className="language__list">JavaScript (ES6)</li>
+          <li className="language__list">Typescript</li>
           <li className="language__list">HTML</li>
           <li className="language__list">CSS/SCSS</li>
         </ul>
         <ul className="skills__frameworks">
           <li className="skills__header heading">Frameworks / library</li>
-          <li className="framework__list">React</li>
+          <li className="framework__list">React/Redux Toolkit</li>
           <li className="framework__list">Styled Components</li>
           <li className="framework__list">Material UI</li>
-          <li className="framework__list">Node</li>
-          <li className="framework__list">Firebase</li>
+          <li className="framework__list">Tailwind CSS</li>
         </ul>
         <ul className="skills__tools">
           <li className="skills__header">Tools</li>
-          <li className="tools__list">Git & Github</li>
-          <li className="tools__list">Chrome DevTools</li>
+          <li className="tools__list">Git</li>
           <li className="tools__list">Bash</li>
+          <li className="tools__list">Node</li>
+          <li className="tools__list">Firebase</li>
         </ul>
       </div>
     </div>

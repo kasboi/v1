@@ -79,23 +79,23 @@ const Container = styled.div`
 const Contact = () => {
   return ( 
     <Container>
-        <h2 className="project__heading">Lets connect</h2>
+        <h2 className="project__heading">Let's connect</h2>
       <form action="https://formsubmit.co/dffac674e12d6f36acbc1d52ddc41b42" method="POST" id="survey-form">
-          <div class="form-class">
-              <label for="name" id="name-label">Name
-                  <input type="text" id="name" name="name" class="form_input" placeholder="Enter your name" required />
+          <div className="form-class">
+              <label htmlFor="name" id="name-label">Name
+                  <input type="text" id="name" name="name" className="form_input" placeholder="Enter your name" required />
               </label>
           </div>
-          <div class="form-class">
-              <label for="email" id="email-label">Email
-                  <input type="email" name="email" id="email" class="form_input" placeholder="Enter your email" required />
+          <div className="form-class">
+              <label htmlFor="email" id="email-label">Email
+                  <input type="email" name="email" id="email" className="form_input" placeholder="Enter your email" required />
               </label>
           </div>
-          <div class="form-class">
-              <textarea name="message" id="textarea" cols="30" rows="5" class="form_input" placeholder="Leave your message here"></textarea>
+          <div className="form-class">
+              <textarea name="message" id="textarea" cols="30" rows="5" className="form_input" placeholder="Leave your message here"></textarea>
           </div>
-          <div class="form-class">
-              <button type="submit" class="form_submit" id="submit">Submit</button>
+          <div className="form-class">
+              <button type="submit" className="form_submit" id="submit">Submit</button>
           </div>
       </form>
     </Container>

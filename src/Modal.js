@@ -36,7 +36,7 @@ const Modal = ({ modal, setModal, setOpen }) => {
     setTimeout(() => {
       setLoading(!loading)
     }, 1000);
-  }, [])
+  }, [loading])
 
   const setModality = () => {
     setModal('')

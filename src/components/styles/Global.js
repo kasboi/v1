@@ -29,7 +29,10 @@ body {
 
   @media ${device.laptop} {
     padding: 0 2.5rem;
-    color: blue;
+  }
+
+  @media ${device.mobileL} {
+    padding: 0 2rem;
   }
 }
 
@@ -79,7 +82,7 @@ ion-icon {
     background-color: ${({theme}) => theme.font.secondaryText};
     
     @media ${device.tablet} {
-      height: 6rem;
+      height: 8rem;
     }
   }
 }
@@ -114,7 +117,7 @@ ion-icon {
     background-color: ${({theme}) => theme.font.secondaryText};
 
     @media ${device.tablet} {
-      height: 4rem;
+      height: 6rem;
     }
   }
 }
