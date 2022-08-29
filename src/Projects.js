@@ -38,10 +38,10 @@ const Box = styled.div`
   @media ${device.tablet} {
     flex: 0 1 45%;
   }
-  @media ${device.mobileL} {
+  @media ${device.mobile} {
     flex: 0 1 100%;
   }
-  
+
 `
 const projectData = [
   {
