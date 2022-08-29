@@ -2,15 +2,19 @@ import styled from "styled-components";
 import { device } from "./components/styles/Media";
 import { motion } from "framer-motion";
 
+import style from "./components/styles/Projects.module.css"
+import { TiFolder, TiLink, TiSocialGithub } from "react-icons/ti";
+
 const Container = styled(motion.div)`
-  padding: 0 4rem;
+  max-width: 85%;
+  margin: 0 auto;
   z-index: -100;
   color: ${({theme}) => theme.font.secondaryText};
 
   @media ${device.tablet} {
-    padding: 2rem;
+    padding: 1.5rem;
   }
-
+  
   .project__heading {
     position: relative;
     font-weight: 500;
@@ -19,50 +23,63 @@ const Container = styled(motion.div)`
     color: ${({theme }) => theme.logo.color};
   }
 `
+const BoxContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem 0;
+`
 const Box = styled.div`
-  margin: 2rem auto;
-  max-width: 40rem;
+  padding: 1.35rem 1.5rem;
+  flex: 0 1 33%;
+  border-radius: 5px;
+  border: 2px solid gray;
 
-  .box__title {
-    display: inline-block;
-    font-size: 1rem;
-    position: relative;
-
-    h3 {
-      display: inline;
-      font-weight: 500;
-      margin-right: .35rem;
-      transition: all .3s;
-    }
-
-    ion-icon {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      color: ${({theme}) => theme.logo.color};
-    }
-
-    &:hover h3 {
-      margin-right: 1rem;
-    }
+  @media ${device.tablet} {
+    flex: 0 1 45%;
   }
-
-  p {
-      font-size: .85rem;
-      margin: .5rem 0;
-    }
+  @media ${device.mobileL} {
+    flex: 0 1 100%;
+  }
+  
 `
-
-const Decor = styled.span`
-  display: inline-block;
-  font-size: .7rem;
-  font-weight: 500;
-  margin-right: .6rem;
-  padding: 2px .6rem;
-  color: ${({theme}) => theme.logo.color};
-  border: 1px solid ${({theme}) => theme.logo.color};
-  border-radius: 3px;
-`
+const projectData = [
+  {
+    live_link: "https://guitarclub.netlify.app/",
+    git_link: "#",
+    project_name: "Guitar Club",
+    project_desc: "A small responsive website i made early on while fiddling with the intricacies of SCSS.",
+    language: ["Javascript","HTML","SCSS"]
+  },
+  {
+    live_link: "https://codepen.io/kolawole-abdullah-solahudeen/pen/BaJzjoN",
+    git_link: "#",
+    project_name: "Tic-Tac game",
+    project_desc: "A simple 3x3 tic-tac toe game.",
+    language: ["Javascript","HTML","CSS"]
+  },
+  {
+    live_link: "https://kas-notesapp.netlify.app/",
+    git_link: "#",
+    project_name: "Task Keeper",
+    project_desc: "A todo list project made with Materialize and firebase services (authentication and database).",
+    language: ["Javascript","HTML","Firebase", "Material UI"]
+  },
+  {
+    live_link: "https://ecstatic-volhard-ea4bc9.netlify.app/",
+    git_link: "#",
+    project_name: "Ace Blog",
+    project_desc: "A simple blog that consumes API and uses it to display various news articles.",
+    language: ["Javascript","HTML","CSS"]
+  },
+  {
+    live_link: "https://codepen.io/kolawole-abdullah-solahudeen/pen/dyJXGGa/",
+    git_link: "#",
+    project_name: "Calculator",
+    project_desc: "A simple calculator.",
+    language: ["Javascript","HTML","CSS"]
+  },
+]
 
 const Projects = () => {
   return (
@@ -75,69 +92,30 @@ const Projects = () => {
       }}
       viewport={{once: true}}
     >
-        <h3 className="project__heading">Projects</h3>
-        <Box>
-          <div className="box__title">
-            <h3><a href="https://guitarclub.netlify.app/" rel="noreferrer" target="_blank">Guitar Club</a></h3>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <p>A small responsive website i made early on while fiddling with the intricacies of SCSS.</p>
-          <div className="language">
-            <Decor>Javascript</Decor>
-            <Decor>HTML</Decor>
-            <Decor>SCSS</Decor>
-          </div>
-        </Box>
-        <Box>
-          <div className="box__title">
-            <h3><a href="https://codepen.io/kolawole-abdullah-solahudeen/pen/BaJzjoN" rel="noreferrer" target="_blank">Tic-Tac game</a></h3>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <p>A simple 3x3 tic-tac toe game.</p>
-          <div className="language">
-            <Decor>Javascript</Decor>
-            <Decor>HTML</Decor>
-            <Decor>CSS</Decor>
-          </div>
-        </Box>
-        <Box>
-          <div className="box__title">
-            <h3><a href="https://codepen.io/kolawole-abdullah-solahudeen/pen/dyJXGGa" rel="noreferrer" target="_blank">Calculator</a></h3>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <p>A simple calculator.</p>
-          <div className="language">
-            <Decor>Javascript</Decor>
-            <Decor>HTML</Decor>
-            <Decor>CSS</Decor>
-          </div>
-        </Box>
-        <Box>
-          <div className="box__title">
-            <h3><a href="https://kas-todo.netlify.app/" rel="noreferrer" target="_blank">Task Master</a></h3>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <p>A todo list project made with Materialize and firebase services (authentication and database).</p>
-          <div className="language">
-            <Decor>Javascript</Decor>
-            <Decor>HTML</Decor>
-            <Decor>CSS</Decor>
-            <Decor>Firebase</Decor>
-            <Decor>Materialize</Decor>
-          </div>
-        </Box>
-        <Box>
-          <div className="box__title">
-            <h3><a href="https://ecstatic-volhard-ea4bc9.netlify.app/" target="_blog">Ace Blog</a></h3>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <p>A simple blog that consumes API and uses it to display various news articles.</p>
-          <div className="language">
-            <Decor>Javascript</Decor>
-            <Decor>HTML</Decor>
-            <Decor>CSS</Decor>
-          </div>
-        </Box>
+      <h3 className="project__heading">Projects</h3>
+      <BoxContainer>
+        {projectData.map(data => (
+          <Box>
+            <div className={style.box__icons}>
+              <TiFolder style={{fontSize: '4rem', marginRight: 'auto'}}/>
+              <a href={data.live_link} rel="noreferrer" target="_blank">
+                <TiLink style={{fontSize: '2.5rem'}}/>
+              </a>
+              <a href={data.git_link} rel="noreferrer">
+                <TiSocialGithub style={{fontSize: '2.5rem'}}/>
+              </a>
+            </div>
+            <h2 className={style.box__heading}>{data.project_name}</h2>
+            <p className={style.box__para}>{data.project_desc}</p>
+            <ul className={style.box__footer}>
+              {data.language.map(lang => (
+                <li className={style.box__lang}>{lang}</li>
+              ))}
+            </ul>
+          </Box>
+        ))}
+      </BoxContainer>
+      
     </Container>
    );
 }
