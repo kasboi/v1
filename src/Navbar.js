@@ -6,6 +6,8 @@ import NightIcon from './icons/night'
 import LightIcon from './icons/light';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import LightLogo from './icons/logo_light'
+import DarkLogo from './icons/logo_dark'
 
 const { Container, Nav, Logo, } = NavStyle
 
@@ -39,7 +41,8 @@ const Navbar = ({ theme, invertTheme, setHere}) => {
     <Nav>
       <Link to="/" style={{
         marginRight: "auto"
-      }}><Logo alt='logo'/>
+      }}>
+        {switched === 'switched' ? <LightLogo /> : <DarkLogo />}
       </Link>
       <Resume href='doc/my_resume.pdf'
       whileTap={{scale: 0.9, transition: {ease: 'easeInOut'}}}

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import style from "./components/styles/Projects.module.css"
 import { TiFolder, TiLink, TiSocialGithub } from "react-icons/ti";
 
+import { projectData } from "./ProjectList";
+
 const Container = styled(motion.div)`
   max-width: 85%;
   margin: 0 auto;
@@ -37,50 +39,14 @@ const Box = styled.div`
   background: ${({theme}) => theme.modal.primaryColor};
 
   @media ${device.tablet} {
-    flex: 0 1 45%;
+    flex: 0 1 80%;
+    margin: 0 auto;
   }
   @media ${device.mobile} {
     flex: 0 1 100%;
   }
 
 `
-const projectData = [
-  {
-    live_link: "https://guitarclub.netlify.app/",
-    git_link: "#",
-    project_name: "Guitar Club",
-    project_desc: "A small responsive website i made early on while fiddling with the intricacies of SCSS.",
-    language: ["Javascript","HTML","SCSS"]
-  },
-  {
-    live_link: "https://codepen.io/kolawole-abdullah-solahudeen/pen/BaJzjoN",
-    git_link: "#",
-    project_name: "Tic-Tac game",
-    project_desc: "A simple 3x3 tic-tac toe game.",
-    language: ["Javascript","HTML","CSS"]
-  },
-  {
-    live_link: "https://kas-notesapp.netlify.app/",
-    git_link: "#",
-    project_name: "Task Keeper",
-    project_desc: "A todo list project made with Materialize and firebase services (authentication and database).",
-    language: ["Javascript","HTML","Firebase", "Material UI"]
-  },
-  {
-    live_link: "https://ecstatic-volhard-ea4bc9.netlify.app/",
-    git_link: "#",
-    project_name: "Ace Blog",
-    project_desc: "A simple blog that consumes API and uses it to display various news articles.",
-    language: ["Javascript","HTML","CSS"]
-  },
-  {
-    live_link: "https://codepen.io/kolawole-abdullah-solahudeen/pen/dyJXGGa/",
-    git_link: "#",
-    project_name: "Calculator",
-    project_desc: "A simple calculator.",
-    language: ["Javascript","HTML","CSS"]
-  },
-]
 
 const Projects = () => {
   return (
@@ -110,7 +76,7 @@ const Projects = () => {
             <p className={style.box__para}>{data.project_desc}</p>
             <ul className={style.box__footer}>
               {data.language.map(lang => (
-                <li className={style.box__lang}>{lang}</li>
+                <li className={style.box__lang}>-{lang}-</li>
               ))}
             </ul>
           </Box>
