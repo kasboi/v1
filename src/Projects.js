@@ -34,6 +34,7 @@ const Box = styled.div`
   flex: 0 1 33%;
   border-radius: 5px;
   border: 2px solid gray;
+  background: ${({theme}) => theme.modal.primaryColor};
 
   @media ${device.tablet} {
     flex: 0 1 45%;

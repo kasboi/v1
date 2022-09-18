@@ -117,6 +117,9 @@ const Container = styled(motion.div)`
 
       .job__duration {
         display: flex;
+        @media ${device.mobileL} {
+        flex-direction: column;
+      }
       }
       .job__work {
         font-size: .85rem;
@@ -158,6 +161,7 @@ const Home = () => {
         <ul className="skills__frameworks">
           <li className="skills__header heading">Frameworks / library</li>
           <li className="framework__list">React/Redux Toolkit</li>
+          <li className="framework__list">Next.JS</li>
           <li className="framework__list">Styled Components</li>
           <li className="framework__list">Material UI</li>
           <li className="framework__list">Tailwind CSS</li>
@@ -174,6 +178,13 @@ const Home = () => {
     <div className="experience">
       <div className="experience__header heading">Experience</div>
       <div className="experience__activity">
+      <div className="job">
+          <div className="job__duration">
+            <span className="job__work">HiC Mikrolab</span>
+            <span className="job__year">Jan. 2022 - Present</span>
+          </div>
+          <div className="job__title">Software Engineer Intern</div>
+        </div>
       <div className="job">
           <div className="job__duration">
             <span className="job__work">ALX Africa</span>
