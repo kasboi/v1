@@ -183,12 +183,12 @@ const Home = () => {
             <span className="job__work">HiC Mikrolab</span>
             <span className="job__year">Jan. 2022 - Present</span>
           </div>
-          <div className="job__title">Software Engineer Intern</div>
+          <div className="job__title">Software Developer</div>
         </div>
       <div className="job">
           <div className="job__duration">
             <span className="job__work">ALX Africa</span>
-            <span className="job__year">Feb. 2022 - Present</span>
+            <span className="job__year">Feb. 2022 - August 2022</span>
           </div>
           <div className="job__title">Software Engineer Intern</div>
         </div>
@@ -201,7 +201,7 @@ const Home = () => {
         </div>
         <div className="job">
           <div className="job__duration">
-            <span className="job__work">Yemtech (SIWES)</span>
+            <span className="job__work">Yemtech</span>
             <span className="job__year">Jan. 2018 - May 2020</span>
           </div>
           <div className="job__title">Web Designer</div>

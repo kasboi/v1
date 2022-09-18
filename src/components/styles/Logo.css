@@ -1,0 +1,15 @@
+.logo-svg{
+  width: 85px;
+  height: auto;
+  stroke: #fff;
+  stroke-width: 4;
+  overflow: visible;
+}
+
+.logo-svg--dark{
+  width: 75px;
+  height: auto;
+  stroke: #000;
+  stroke-width: 18;
+  overflow: visible;
+}
