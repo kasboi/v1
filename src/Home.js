@@ -47,6 +47,10 @@ const TxtContainer = styled(motion.div)`
   }
   p {
     line-height: 1.8rem;
+
+    @media ${device.tablet}{
+    line-height: normal;
+    }
   }
 `
 const ImgContainer = styled(motion.div)`
