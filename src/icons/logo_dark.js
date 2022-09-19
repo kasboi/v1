@@ -7,10 +7,10 @@ const DarkLogo = () => {
             fill: "rgba(255, 255, 255, 0)",
         },
         visible: {
-            fill: "rgba(0, 0, 0, .85)",
+            fill: "rgba(0, 0, 0, .8)",
             transition: {
                 duration: .75,
-                ease: [1, 0, 0.8, 1],
+                ease: "easeIn",
                 when: "afterChildren",
                 staggerChildren: 1.2,
             },

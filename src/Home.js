@@ -74,13 +74,8 @@ const ImgContainer = styled(motion.div)`
 const Home = () => {
 
   return (
-    <Container
-    animate={{transition: {staggerChildren: 5}}}
-    > 
-      <TxtContainer
-      initial={{x: '-100vh', opacity: 0}}
-      animate={{x: 0, opacity: 1, transition: {delay: 0.8, duration: 0.65, ease: 'easeInOut', type: 'spring', stiffness: 120}}}
-      >
+    <Container> 
+      <TxtContainer>
         <h1>Hello,{device.tablet ? <br /> : ''} I'm KAS</h1>
         <h4>Kolawole Abdullah Solahudeen</h4>
         <p>I provide front-end solutions using simple and reusable components to build fluid designs and experience. I enjoy writing clean and intuitive codes and when I'm not in front of the computer screen, I'm probably enjoying manga, anime, music or researching the new big thing in tech.<br /> I am available for contracts and full-time remote jobs.</p>
@@ -97,7 +92,7 @@ const Home = () => {
         />
       </ImgContainer>
     </Container>
-   );
+   )
 }
  
 export default Home;
