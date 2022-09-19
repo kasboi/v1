@@ -7,10 +7,10 @@ const LightLogo = () => {
             fill: "rgba(255, 255, 255, 0)",
         },
         visible: {
-            fill: "rgba(255, 255, 255, 1)",
+            fill: "rgba(255, 255, 255, .9)",
             transition: {
                 duration: 1,
-                ease: [1, 0, 0.8, 1],
+                ease: "easeIn",
                 when: "afterChildren",
                 staggerChildren: 1.2,
             },
@@ -58,6 +58,8 @@ const LightLogo = () => {
         -12 -13 -27 -6 -109 50 -52 35 -93 69 -90 76 2 6 55 76 118 155 180 226 184
         234 152 302 -27 57 -107 84 -162 53z"
                     variants={pathVariant}
+                    initial={{rotate: 180}}
+                    animate={{rotate: 0, transition:{duration: .75, ease: 'easeOut'}}}
                 />
                 <motion.path
                     d="M758 1810 c-117 -20 -262 -78 -355 -141 -69 -47 -188 -164 -239 -236

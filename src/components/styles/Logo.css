@@ -1,8 +1,9 @@
 .logo-svg{
-  width: 85px;
+  width: 75px;
   height: auto;
   stroke: #fff;
-  stroke-width: 4;
+  stroke-width: 16;
+  stroke-linejoin: round;
   overflow: visible;
 }
 
@@ -10,6 +11,7 @@
   width: 75px;
   height: auto;
   stroke: #000;
-  stroke-width: 18;
+  stroke-linejoin: round;
+  stroke-width: 16;
   overflow: visible;
 }
