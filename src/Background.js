@@ -143,19 +143,33 @@ const Home = () => {
                 <div className="background__heading heading">Background</div>
                 <div className="background__paragraph">
                     <p>
-                        I'm currently an Intern at ALX africa, building things
-                        for the web with some awesome people. I am also enrolled
-                        in the Federal university of agriculture, Abeokuta
-                        studying computer science.
+                        As a software engineer, I have a strong technical
+                        background that I have developed through my education
+                        and work experience. I hold a degree in computer
+                        science, with coursework in key areas such as
+                        algorithms, data structures, programming languages, and
+                        software design.
                     </p>
                     <p>
-                        As a software engineer, I enjoy bridging the gap between
-                        engineering and design — combining my technical
-                        knowledge with my keen eye for design to create a
-                        beautiful product. My goal is to always build
-                        applications that are scalable and efficient under the
-                        hood while providing engaging, pixel-perfect user
-                        experiences.
+                        In my current position at HiC Mikrolab, I have had the
+                        opportunity to work on a variety of projects, including
+                        web applications, mobile apps, and back-end systems. I
+                        have expertise in technologies such as Javascript, Typescript, and
+                        React, and I am familiar with agile development
+                        methodologies. I enjoy working in a team environment and
+                        thrive on the challenge of delivering high-quality
+                        software on time.
+                    </p>
+                    <p>
+                        One of my key strengths is my problem-solving ability. I
+                        have a knack for troubleshooting and debugging complex
+                        systems, and I am always looking for ways to improve
+                        processes and make them more efficient. In addition to
+                        my technical skills, I am passionate about staying
+                        up-to-date with the latest technologies and industry
+                        trends. Overall, my background in software engineering
+                        has prepared me to excel in this field and make a
+                        valuable contribution to any organization.
                     </p>
                 </div>
             </div>
@@ -166,6 +180,7 @@ const Home = () => {
                         <li className="skills__header">Languages</li>
                         <li className="language__list">JavaScript (ES6)</li>
                         <li className="language__list">Typescript</li>
+                        <li className="language__list">Ruby</li>
                         <li className="language__list">HTML</li>
                         <li className="language__list">CSS/SCSS</li>
                     </ul>
@@ -175,7 +190,8 @@ const Home = () => {
                         </li>
                         <li className="framework__list">React/Redux Toolkit</li>
                         <li className="framework__list">Next.JS</li>
-                        <li className="framework__list">Styled Components</li>
+                        <li className="framework__list">Ruby on Rails</li>
+                        <li className="framework__list">Express.js</li>
                         <li className="framework__list">Material UI</li>
                         <li className="framework__list">Tailwind CSS</li>
                     </ul>
