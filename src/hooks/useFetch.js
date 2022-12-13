@@ -9,7 +9,7 @@ import { Theme } from "../components/styles/Theme";
 const { theme } = Theme;
 
 const useFetch = () => {
-  // localeStorage takes key/value pair, setting this as deafult key
+  // localeStorage takes key/value pair, setting this as default key
   let key
   const getUserTheme = () => {
     if (localStorage.length > 0) {
