@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import LightLogo from './icons/logo_light'
 import DarkLogo from './icons/logo_dark'
 
-const { Container, Nav, Logo, } = NavStyle
+const { Container, Nav, } = NavStyle
 
 const Navbar = ({ theme, invertTheme, setHere}) => {
   const { switched, setSwitched } = useContext(propContext)

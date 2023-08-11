@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { device } from "./components/styles/Media"
 import { motion } from "framer-motion"
 import { useState } from "react"
-import styles from "./components/styles/ScrollTransitions.module.css"
 
 const Container = styled(motion.div)`
     display: flex;
