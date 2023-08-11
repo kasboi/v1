@@ -1,10 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
-import { device } from './Media'
+import { createGlobalStyle } from "styled-components"
+import { device } from "./Media"
 
 const GlobalStyle = createGlobalStyle`
 :root {
-  --text-1: ${({theme}) => theme.font.primaryText};
-  --text-2: ${({theme}) => theme.font.secondaryText};
+  --text-1: ${({ theme }) => theme.font.primaryText};
+  --text-2: ${({ theme }) => theme.font.secondaryText};
 }
 
 * {
@@ -22,7 +22,7 @@ body {
   background-color: ${({ theme }) => theme.color.backgroundColor};
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: ${({theme}) => theme.font.color};
+  color: ${({ theme }) => theme.font.color};
   transition:  .3s cubic-bezier(0.45, 0, 0.55, 1);
   padding: 0 2rem;
   height: 100%;
@@ -44,13 +44,13 @@ a {
   text-decoration: none;
 }
 a:focus, a:visited, a:active, a:hover, a:link {
-  color: ${({theme}) => theme.font.secondaryText};
+  color: ${({ theme }) => theme.font.secondaryText};
 }
 
 ion-icon {
     font-size: 24px;
     margin-bottom: 5px;
-    color: ${({theme}) => theme.font.secondaryText};
+    color: ${({ theme }) => theme.font.secondaryText};
 
     @media ${device.tablet} {
       font-size: 18px;
@@ -58,9 +58,11 @@ ion-icon {
     }
 }
 
-${'' /* ::-webkit-scrollbar {
+${
+    "" /* ::-webkit-scrollbar {
     width: 12px;
-} */}
+} */
+}
 
 .logo-box {
   display: flex;
@@ -77,6 +79,10 @@ ${'' /* ::-webkit-scrollbar {
 
   li {
     padding: 4px;
+
+    @media ${device.mobile} {
+      padding: 3px;
+    }
   }
 
   ::after {
@@ -85,7 +91,7 @@ ${'' /* ::-webkit-scrollbar {
     width: 1px;
     height: 9rem;
     margin: 0px auto;
-    background-color: ${({theme}) => theme.font.secondaryText};
+    background-color: ${({ theme }) => theme.font.secondaryText};
     
     @media ${device.tablet} {
       height: 8rem;

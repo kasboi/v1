@@ -58,6 +58,10 @@ const Container = styled(motion.div)`
 
     .background__paragraph :not(p:last-child) {
         margin-bottom: 1.5rem;
+
+        @media ${device.tablet} {
+            margin-bottom: 1rem;
+        }
     }
 
     /* .skills {
@@ -171,10 +175,10 @@ const Technologies = styled.div`
 
             &__heading {
                 font-size: 1rem;
-                margin-bottom: .75rem;
+                margin-bottom: 0.75rem;
 
                 @media ${device.tablet} {
-                    font-size: .9rem;
+                    font-size: 0.9rem;
                 }
             }
 
@@ -220,10 +224,21 @@ const Home = () => {
                 <div className="background__heading heading">Background</div>
                 <div className="background__paragraph">
                     <p>
-                        I am a Software Engineer at Andela, where I build web
+                        I am a software engineer at Andela, where I build web
                         products with a team of awesome people. In addition, I
-                        mentor aspiring front-end developers through Career
-                        Connects highly specialized boot camp program.
+                        mentor aspiring front-end developers through <a href="https://linktr.ee/careerconnectacademy" target="_blank">CareerConnects'</a> specialized boot camp program.
+                    </p>
+                    <p>
+                        I have had the opportunity to work on various projects,
+                        including web applications, mobile apps, and back-end
+                        systems.
+                    </p>
+                    <p>
+                        I have expertise in technologies such as Javascript,
+                        Typescript, and React, and I am familiar with agile
+                        development methodologies. I enjoy working in a team
+                        environment and thrive on the challenge of delivering
+                        high-quality software on time.
                     </p>
                     <p>
                         As an engineer, I enjoy combining my technical knowledge
@@ -236,7 +251,8 @@ const Home = () => {
             <Technologies className="technologies">
                 <h3 className="technologies__heading">Technologies</h3>
                 <p className="technologies__paragraph">
-                    Here are some of the various technologies I am proficient with
+                    Here are some of the various technologies I am proficient
+                    with
                 </p>
                 <div className="tech-stack">
                     <ul className="tech-list">
