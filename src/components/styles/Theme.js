@@ -14,7 +14,8 @@ const theme = {
   },
   color: {
     backgroundColor: '#f8f9fa',
-    switch: '#e9ecef'
+    switch: '#e9ecef',
+    icon: '#750d8f',
   },
   modal: {
     primaryColor: '#f1f3f5',
@@ -36,7 +37,8 @@ const invertTheme = {
   },
   color: {
     backgroundColor: '#212529',
-    switch: 'teal'
+    switch: 'teal',
+    icon: '#e6eaee',
   },
   modal: {
     primaryColor: '#343a40',

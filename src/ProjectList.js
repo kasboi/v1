@@ -1,5 +1,19 @@
 export const projectData = [
   {
+    live_link: "https://leafy-tapioca-afb2d9.netlify.app/",
+    git_link: "#",
+    project_name: "Bootcamp Portfolio",
+    project_desc: "A portfolio made with HTML5 and CSS3 that displays my student projects and skills to recruiters. The portfolio is simple, responsive and looks nice. We hope it shows that they are capable and ready to work with a team or organization.",
+    language: ["HTML","CSS","CSS Grid"] 
+  },
+  {
+    live_link: "https://careerconnect-bootcamp-page.netlify.app/",
+    git_link: "https://github.com/kasboi/hotel-landing-page",
+    project_name: "Hotel Landing Page",
+    project_desc: "We created this landing page using CSS flexbox and stunning animations. Our goal was to make it easy for boot camp students to implement knowledge gained and visually pleasing.",
+    language: ["HTML","CSS","Flexbox", "Animations"] 
+  },
+  {
     live_link: "https://ts-weather-forecast.netlify.app/",
     git_link: "https://github.com/kasboi/React-Weather-App-Typescript#",
     project_name: "Weather Forecast",

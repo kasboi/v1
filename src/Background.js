@@ -2,6 +2,8 @@ import styled from "styled-components"
 import { device } from "./components/styles/Media"
 import { motion } from "framer-motion"
 import WorkExperience from "./WorkExperience"
+import VercelIcon from "./components/VercelIcon"
+import NetlifyIcon from "./components/NetlifyIcon"
 
 const Container = styled(motion.div)`
     padding: 2rem 2rem;
@@ -168,9 +170,11 @@ const Technologies = styled.div`
             }
 
             &__heading {
-                margin: 0.5rem 0;
+                font-size: 1rem;
+                margin-bottom: .75rem;
+
                 @media ${device.tablet} {
-                    font-size: 1rem;
+                    font-size: .9rem;
                 }
             }
 
@@ -190,7 +194,7 @@ const Technologies = styled.div`
 
                 .devicon {
                     font-size: 24px;
-                    color: ${({ theme }) => theme.logo.color};
+                    color: ${({ theme }) => theme.color.icon};
 
                     @media ${device.mobile} {
                         font-size: 20px;
@@ -216,27 +220,23 @@ const Home = () => {
                 <div className="background__heading heading">Background</div>
                 <div className="background__paragraph">
                     <p>
-                        I'm currently an Intern at ALX africa, building things
-                        for the web with some awesome people. I am also enrolled
-                        in the Federal university of agriculture, Abeokuta
-                        studying computer science.
+                        I am a Software Engineer at Andela, where I build web
+                        products with a team of awesome people. In addition, I
+                        mentor aspiring front-end developers through Career
+                        Connects highly specialized boot camp program.
                     </p>
                     <p>
-                        As a software engineer, I enjoy bridging the gap between
-                        engineering and design — combining my technical
-                        knowledge with my keen eye for design to create a
-                        beautiful product. My goal is to always build
-                        applications that are scalable and efficient under the
-                        hood while providing engaging, pixel-perfect user
-                        experiences.
+                        As an engineer, I enjoy combining my technical knowledge
+                        with my keen eye for design to create beautiful,
+                        scalable, and efficient applications that provide
+                        engaging, pixel-perfect user experiences.
                     </p>
                 </div>
             </div>
             <Technologies className="technologies">
                 <h3 className="technologies__heading">Technologies</h3>
                 <p className="technologies__paragraph">
-                    Here are some of the technologies I use as a software
-                    developer
+                    Here are some of the various technologies I am proficient with
                 </p>
                 <div className="tech-stack">
                     <ul className="tech-list">
@@ -293,11 +293,13 @@ const Home = () => {
                             <span>Github</span>
                         </li>
                         <li className="tech-list__item">
-                            <i class="devicon-javascript-plain devicon"></i>
+                            {/* <i class="devicon-javascript-plain devicon"></i> */}
+                            <VercelIcon />
                             <span>Vercel</span>
                         </li>
                         <li className="tech-list__item">
-                            <i class="devicon-javascript-plain devicon"></i>
+                            {/* <i class="devicon-javascript-plain devicon"></i> */}
+                            <NetlifyIcon />
                             <span>Netlify</span>
                         </li>
                     </ul>

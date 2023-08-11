@@ -8,14 +8,10 @@ import { TiFolder, TiLink, TiSocialGithub } from "react-icons/ti";
 import { projectData } from "./ProjectList";
 
 const Container = styled(motion.div)`
-  max-width: 85%;
+  max-width: 90%;
   margin: 0 auto;
   z-index: -100;
   color: ${({theme}) => theme.font.secondaryText};
-
-  @media ${device.tablet} {
-    padding: 1.5rem;
-  }
   
   .project__heading {
     position: relative;
@@ -29,17 +25,22 @@ const BoxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem 0;
+  gap: 1.5rem 0;
 `
 const Box = styled.div`
   padding: 1.35rem 1.5rem;
-  flex: 0 1 33%;
+  flex: 0 0 31%;
   border-radius: 5px;
   border: 2px solid gray;
   background: ${({theme}) => theme.modal.primaryColor};
 
+  @media ${device.laptop} {
+    flex: 0 0 32%;
+    margin: 0 auto;
+  }
+
   @media ${device.tablet} {
-    flex: 0 1 80%;
+    flex: 0 0 45%;
     margin: 0 auto;
   }
   @media ${device.mobile} {

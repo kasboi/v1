@@ -44,7 +44,7 @@ const Navbar = ({ theme, invertTheme, setHere}) => {
       }}>
         {switched === 'switched' ? <LightLogo /> : <DarkLogo />}
       </Link>
-      <Resume href='doc/my_resume.pdf'
+      <Resume href='https://drive.google.com/file/d/1QHTYOvT8kyzjtCvPrvuZw6f3hhmcx8ey/view?usp=sharing' target='_blank'
       whileTap={{scale: 0.9, transition: {ease: 'easeInOut'}}}
       >
         RESUME
