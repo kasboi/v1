@@ -24,15 +24,15 @@ body {
   font-weight: 300;
   color: ${({theme}) => theme.font.color};
   transition:  .3s cubic-bezier(0.45, 0, 0.55, 1);
-  padding: 0 4rem;
+  padding: 0 2rem;
   height: 100%;
 
   @media ${device.laptop} {
-    padding: 0 2.5rem;
+    padding: 0 1.5rem;
   }
 
   @media ${device.mobileL} {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
 
@@ -48,13 +48,19 @@ a:focus, a:visited, a:active, a:hover, a:link {
 }
 
 ion-icon {
-    font-size: 1.4rem;
+    font-size: 24px;
+    margin-bottom: 5px;
     color: ${({theme}) => theme.font.secondaryText};
 
     @media ${device.tablet} {
-      font-size: 1.6rem;
+      font-size: 18px;
+      margin: 5px 0;
     }
 }
+
+${'' /* ::-webkit-scrollbar {
+    width: 12px;
+} */}
 
 .logo-box {
   display: flex;
@@ -87,40 +93,6 @@ ion-icon {
   }
 }
 
-.text-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  color: ${({theme}) => theme.font.secondaryText};
-
-  a {
-    margin: 20px auto;
-    padding: 10px;
-    font-size: .85rem;
-    letter-spacing: 0.15em;
-    writing-mode: vertical-rl;
-    color: inherit;
-
-    @media ${device.tablet} {
-      font-size: 1rem;
-      padding: 0;
-    }
-
-  }
-  ::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 8rem;
-    margin: 0px auto;
-    background-color: ${({theme}) => theme.font.secondaryText};
-
-    @media ${device.tablet} {
-      height: 6rem;
-    }
-  }
-}
 `
 
 export default GlobalStyle

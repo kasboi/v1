@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 
 const Container = styled(motion.div)`
   display: flex;
-  margin: auto 3rem;
+  margin: auto 1.5rem;
   align-items: center;
   justify-content: space-between;
-  min-height: 90vh;
+  min-height: 80vh;
 
   @media ${device.tablet}{
-    margin: auto 2rem;
+    margin: auto 1rem;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
   }
   @media ${device.mobileL}{
-    margin: auto 1rem;
+    margin: auto .4rem;
   }
 `
 
@@ -42,14 +42,23 @@ const TxtContainer = styled(motion.div)`
     margin-bottom: .5rem;
   }
   h4 {
-    font-weight: 450;
+    font-weight: 500;
+    font-size: 1.45rem;
     margin-bottom: 1.3rem;
+
+    @media ${device.mobileL} {
+      font-size: 1rem;
+    }
   }
   p {
-    line-height: 1.8rem;
+    font-weight: ${({theme}) => theme.font.fontWeight};
+    margin: .5rem 0;
 
     @media ${device.tablet}{
     line-height: normal;
+    }
+    @media ${device.mobile}{
+      font-size: .9rem;
     }
   }
 `
@@ -78,7 +87,8 @@ const Home = () => {
       <TxtContainer>
         <h1>Hello,{device.tablet ? <br /> : ''} I'm KAS</h1>
         <h4>Kolawole Abdullah Solahudeen</h4>
-        <p>I provide front-end solutions using simple and reusable components to build fluid designs and experience. I enjoy writing clean and intuitive codes and when I'm not in front of the computer screen, I'm probably enjoying manga, anime, music or researching the new big thing in tech.<br /> I am available for contracts and full-time remote jobs.</p>
+        <p>I specialize in creating front-end solutions using simple and reusable components, which results in fluid designs and intuitive user experiences. My passion for clean code brings joy to my work. I enjoy exploring technology, manga, anime, and music when not working.</p>
+        <p>Let's work together to bring your vision to life! I am available for both contract and full-time remote positions.</p>
       </TxtContainer>
       <ImgContainer
       initial={{opacity: 0}}
