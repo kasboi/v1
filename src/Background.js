@@ -226,7 +226,7 @@ const Home = () => {
                     <p>
                         I am a software engineer at Andela, where I build web
                         products with a team of awesome people. In addition, I
-                        mentor aspiring front-end developers through <a href="https://linktr.ee/careerconnectacademy" target="_blank">CareerConnects'</a> specialized boot camp program.
+                        mentor aspiring front-end developers through <a href="https://linktr.ee/careerconnectacademy" target="_blank" rel="noreferrer">CareerConnects'</a> specialized boot camp program.
                     </p>
                     <p>
                         I have had the opportunity to work on various projects,
