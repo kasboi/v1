@@ -10,7 +10,7 @@ export const projectData = [
     live_link: "https://careerconnect-bootcamp-page.netlify.app/",
     git_link: "https://github.com/kasboi/hotel-landing-page",
     project_name: "Hotel Landing Page",
-    project_desc: "We created this landing page using CSS flexbox and stunning animations. Our goal was to make it easy for boot camp students to implement knowledge gained and visually pleasing.",
+    project_desc: "We created this landing page using CSS flexbox and stunning animations as part of the frontend boot camp program. My goal was to impart practical knowledge of various CSS topics.",
     language: ["HTML","CSS","Flexbox", "Animations"] 
   },
   {
