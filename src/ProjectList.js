@@ -1,5 +1,12 @@
 export const projectData = [
   {
+    live_link: "https://navigate-jade.vercel.app/",
+    git_link: "https://github.com/kasboi/navigate",
+    project_name: "Navigate - Urban Areas",
+    project_desc: "An open source project for discovering quality of life and average salaries for various job sectors in urban areas. Includes search, filter, pictures, score of living, infinite scroll amongst other features.",
+    language: ["Typescript", "Next.js","React","Teleport Open API"]
+  },
+  {
     live_link: "https://leafy-tapioca-afb2d9.netlify.app/",
     git_link: "#",
     project_name: "Bootcamp Portfolio",
