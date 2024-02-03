@@ -7,6 +7,13 @@ export const projectData = [
     language: ["Typescript", "Next.js","React","Teleport Open API"]
   },
   {
+    live_link: "https://vencru-two.vercel.app/",
+    git_link: "https://github.com/kasboi/vencru",
+    project_name: "Responsive Dashboard",
+    project_desc: "A simple responsive dashboard design I implemented as part of a take home project",
+    language: ["Typescript", "Next.js","React","Tailwind"]
+  },
+  {
     live_link: "https://leafy-tapioca-afb2d9.netlify.app/",
     git_link: "#",
     project_name: "Bootcamp Portfolio",

@@ -24,27 +24,24 @@ const Container = styled(motion.div)`
 const BoxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem 0;
+  gap: 1.5rem 1rem;
 `
 const Box = styled.div`
   padding: 1.35rem 1.5rem;
-  flex: 0 0 31%;
+  flex: 1 0 31%;
   border-radius: 5px;
   border: 2px solid gray;
   background: ${({theme}) => theme.modal.primaryColor};
 
   @media ${device.laptop} {
-    flex: 0 0 32%;
-    margin: 0 auto;
+    flex: 1 0 32%;
   }
 
   @media ${device.tablet} {
-    flex: 0 0 45%;
-    margin: 0 auto;
+    flex: 1 0 45%;
   }
   @media ${device.mobile} {
-    flex: 0 1 100%;
+    flex: 1 0 100%;
   }
 
 `
